@@ -14,7 +14,7 @@ config/name="Multiplayer Bomber"
 config/description="A multiplayer implementation of the classic bomberman game.
 One of the players should press \"Host\", while the other
 should type in his address and press \"Play\"."
-config/tags=PackedStringArray("2d", "demo", "network", "official")
+config/tags=PackedStringArray("2d", "beta", "demo", "network", "official")
 run/main_scene="res://lobby.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.webp"
