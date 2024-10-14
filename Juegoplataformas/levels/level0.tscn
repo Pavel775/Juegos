@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://csq8k2pshnuxf"]
+[gd_scene load_steps=14 format=3 uid="uid://csq8k2pshnuxf"]
 
 [ext_resource type="Texture2D" uid="uid://cny3k5thyhi5x" path="res://Rocky Roads/Backgrounds/trees.png" id="1_lbrrd"]
 [ext_resource type="PackedScene" uid="uid://cmp0gy08ovmtu" path="res://players/player.tscn" id="1_lod2p"]
@@ -176,13 +176,19 @@ size = Vector2(16, 231)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0eeh"]
 size = Vector2(48, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxkvu"]
+size = Vector2(80, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgp1d"]
+size = Vector2(20, 111)
+
 [node name="level0" type="Node2D"]
 
 [node name="mundo" type="Node2D" parent="."]
 
 [node name="Trees" type="Sprite2D" parent="mundo"]
-position = Vector2(224, 166.5)
-scale = Vector2(1.75391, 1.21094)
+position = Vector2(295.75, 166.5)
+scale = Vector2(2.31446, 1.21094)
 texture = ExtResource("1_lbrrd")
 
 [node name="TileMap" type="TileMap" parent="mundo"]
@@ -211,6 +217,22 @@ shape = SubResource("RectangleShape2D_e0eeh")
 [node name="plataforma3" type="CollisionShape2D" parent="mundo/TileMap/StaticBody2D"]
 position = Vector2(312, 120)
 shape = SubResource("RectangleShape2D_e0eeh")
+
+[node name="suelo2" type="CollisionShape2D" parent="mundo/TileMap/StaticBody2D"]
+position = Vector2(552, 233)
+shape = SubResource("RectangleShape2D_uxkvu")
+
+[node name="suelo agua" type="CollisionShape2D" parent="mundo/TileMap/StaticBody2D"]
+position = Vector2(478, 344)
+shape = SubResource("RectangleShape2D_uxkvu")
+
+[node name="pared agua derecha" type="CollisionShape2D" parent="mundo/TileMap/StaticBody2D"]
+position = Vector2(522, 296.5)
+shape = SubResource("RectangleShape2D_vgp1d")
+
+[node name="pared agua izquierda" type="CollisionShape2D" parent="mundo/TileMap/StaticBody2D"]
+position = Vector2(438, 297)
+shape = SubResource("RectangleShape2D_vgp1d")
 
 [node name="player" parent="mundo" instance=ExtResource("1_lod2p")]
 position = Vector2(17, 208)
