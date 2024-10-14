@@ -1,0 +1,461 @@
+[gd_scene load_steps=41 format=3 uid="uid://ce57x0okr62jj"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/Mario_bdy.tscn" id="2"]
+[ext_resource type="Script" path="res://Scenes/Lista_Objetos.gd" id="3"]
+[ext_resource type="PackedScene" path="res://Scenes/Ladrillo_Explode.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://Scenes/Fuego.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://Scenes/Mario_W.tscn" id="6"]
+[ext_resource type="Texture2D" uid="uid://bp7n1c8ld5oom" path="res://Tileset/NES - Super Mario Bros - World 1-1.png" id="7"]
+[ext_resource type="TileSet" path="res://Tileset/lvl1.tres" id="8"]
+[ext_resource type="PackedScene" path="res://Scenes/Tortuga.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://Scenes/CaradeNabo.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://Scenes/Tubo.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://Scenes/BaseTubo.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://Scenes/CuboM.tscn" id="13"]
+[ext_resource type="Script" path="res://Scenes/CuboM.gd" id="14"]
+[ext_resource type="PackedScene" path="res://Scenes/Moneda_Bonus.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://Scenes/Hongo.tscn" id="16"]
+[ext_resource type="Texture2D" uid="uid://bpf3umuj5o1e6" path="res://Sprites/cubos.png" id="17"]
+[ext_resource type="PackedScene" path="res://Scenes/Ladrillo.tscn" id="18"]
+[ext_resource type="PackedScene" path="res://Scenes/CheckPoint.tscn" id="19"]
+[ext_resource type="PackedScene" path="res://Scenes/Finish.tscn" id="20"]
+[ext_resource type="Texture2D" uid="uid://bcv0bkicy2jee" path="res://Sprites/gui_moneda.png" id="22"]
+[ext_resource type="AudioStream" uid="uid://j672o8dqxilo" path="res://BGM/01-main-theme-overworld.ogg" id="23"]
+[ext_resource type="AudioStream" uid="uid://dq1rxbu7n035o" path="res://BGM/18-hurry-overworld-.ogg" id="24"]
+[ext_resource type="AudioStream" uid="uid://dse8ibwmu8w0n" path="res://SFX/smb_jump-small.wav" id="25"]
+[ext_resource type="AudioStream" uid="uid://jujf6merbw6u" path="res://SFX/1up.wav" id="26"]
+[ext_resource type="AudioStream" uid="uid://yxetiaxnmggt" path="res://SFX/smb_coin.wav" id="27"]
+[ext_resource type="AudioStream" uid="uid://8tj8r5cvcs2w" path="res://SFX/smb_breakblock.wav" id="28"]
+[ext_resource type="AudioStream" uid="uid://1vt6diiwbgt5" path="res://SFX/smb_bump.wav" id="29"]
+[ext_resource type="AudioStream" uid="uid://v5khobj44ywh" path="res://SFX/Fire Ball.wav" id="30"]
+[ext_resource type="AudioStream" uid="uid://bawrig1vcjpmu" path="res://SFX/smb_flagpole.wav" id="31"]
+[ext_resource type="AudioStream" uid="uid://bpx7sjyby6omt" path="res://SFX/smb_powerup_appears.wav" id="32"]
+[ext_resource type="AudioStream" uid="uid://c4nuqhrgitrso" path="res://SFX/smb_kick.wav" id="33"]
+[ext_resource type="AudioStream" uid="uid://dct23uetokttm" path="res://SFX/smb_powerup.wav" id="34"]
+[ext_resource type="AudioStream" uid="uid://fqghxhoky7nn" path="res://SFX/smb_stomp.wav" id="35"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(18, 16)
+
+[sub_resource type="Animation" id="2"]
+resource_name = "cubo_roto"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="3"]
+length = 0.9
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_svf01"]
+_data = {
+"cubo_roto": SubResource("2"),
+"normal": SubResource("3")
+}
+
+[sub_resource type="Animation" id="5"]
+resource_name = "normal"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8b7ee"]
+_data = {
+"normal": SubResource("5")
+}
+
+[node name="main" type="Node" groups=["main"]]
+script = ExtResource("1")
+mario = ExtResource("2")
+
+[node name="Lista_Objetos" type="Node" parent="." groups=["lista_obj"]]
+script = ExtResource("3")
+ladrillo_exp = ExtResource("4")
+fuego = ExtResource("5")
+mario_w = ExtResource("6")
+
+[node name="spawn" type="Marker2D" parent="." groups=["spawn"]]
+position = Vector2(205, 92)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1680, 25)
+texture = ExtResource("7")
+
+[node name="TileMap" type="TileMap" parent="." groups=["suelo"]]
+position = Vector2(0, 1)
+tile_set = ExtResource("8")
+format = 2
+
+[node name="Nivel" type="Node" parent="." groups=["nivel"]]
+
+[node name="Enemigos" type="Node" parent="Nivel"]
+
+[node name="Tortuga" parent="Nivel/Enemigos" instance=ExtResource("9")]
+position = Vector2(843, 95)
+
+[node name="Tortuga2" parent="Nivel/Enemigos" instance=ExtResource("9")]
+position = Vector2(1355, -29)
+
+[node name="CaradeNabo" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(349, 104)
+
+[node name="CaradeNabo2" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(535, 104)
+
+[node name="CaradeNabo3" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(1325, 102)
+
+[node name="CaradeNabo4" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(1877, 103)
+
+[node name="CaradeNabo5" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(1923, 103)
+
+[node name="CaradeNabo6" parent="Nivel/Enemigos" instance=ExtResource("10")]
+position = Vector2(2788, 101)
+
+[node name="Tortuga3" parent="Nivel/Enemigos" instance=ExtResource("9")]
+position = Vector2(1596, 98)
+
+[node name="Tortuga4" parent="Nivel/Enemigos" instance=ExtResource("9")]
+position = Vector2(2711, 99)
+
+[node name="Tortuga5" parent="Nivel/Enemigos" instance=ExtResource("9")]
+position = Vector2(2698, 35)
+
+[node name="Tubos" type="Node" parent="Nivel"]
+
+[node name="Tubo" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(448, 97)
+
+[node name="Tubo2" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(608, 80)
+
+[node name="Tubo3" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(736, 65)
+
+[node name="Tubo4" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(912, 65)
+
+[node name="Tubo5" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(2608, 97)
+
+[node name="Tubo6" parent="Nivel/Tubos" instance=ExtResource("11")]
+position = Vector2(2864, 97)
+
+[node name="BaseTubo" parent="Nivel/Tubos" instance=ExtResource("12")]
+position = Vector2(736, 96)
+scale = Vector2(1, 1.0625)
+
+[node name="BaseTubo2" parent="Nivel/Tubos" instance=ExtResource("12")]
+position = Vector2(912, 97)
+scale = Vector2(1, 1.0625)
+
+[node name="BaseTubo3" parent="Nivel/Tubos" instance=ExtResource("12")]
+position = Vector2(608, 102)
+scale = Vector2(1, 0.703125)
+
+[node name="Cubos" type="Node" parent="Nivel"]
+
+[node name="CuboM" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(248, 57)
+cantidad = 3
+
+[node name="CuboM6" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1240, 57)
+cantidad = 3
+
+[node name="CuboM2" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(328, 57)
+item = 1
+
+[node name="CuboM7" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1688, 57)
+item = 1
+
+[node name="CuboM12" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1784, 57)
+item = 1
+
+[node name="CuboM3" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(360, 57)
+item = 1
+
+[node name="CuboM8" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1496, -7)
+item = 1
+
+[node name="CuboM11" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1736, 57)
+item = 1
+
+[node name="CuboM4" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(344, -7)
+
+[node name="CuboM9" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(1736, -7)
+
+[node name="CuboM14" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(2712, 57)
+
+[node name="CuboM10" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(2056, -7)
+
+[node name="CuboM13" parent="Nivel/Cubos" instance=ExtResource("13")]
+position = Vector2(2074, -7)
+
+[node name="CuboM5" type="StaticBody2D" parent="Nivel/Cubos" groups=["cubo", "suelo"]]
+position = Vector2(1015, 61)
+script = ExtResource("14")
+item = 2
+cantidad = 1
+moneda = ExtResource("15")
+hongo = ExtResource("16")
+flor = null
+
+[node name="Sprite" type="Sprite2D" parent="Nivel/Cubos/CuboM5"]
+visible = false
+texture = ExtResource("17")
+hframes = 5
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel/Cubos/CuboM5"]
+rotation = 3.14159
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="animacion" type="AnimationPlayer" parent="Nivel/Cubos/CuboM5"]
+libraries = {
+"": SubResource("AnimationLibrary_svf01")
+}
+autoplay = "normal"
+
+[node name="SpawnPoint" type="Marker2D" parent="Nivel/Cubos/CuboM5"]
+position = Vector2(0, -19)
+
+[node name="Bricks" type="Node" parent="Nivel"]
+
+[node name="Ladrillo" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(312, 57)
+
+[node name="Ladrillo2" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(344, 57)
+
+[node name="Ladrillo3" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(376, 57)
+
+[node name="Ladrillo4" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1224, 57)
+
+[node name="Ladrillo16" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1256, 57)
+
+[node name="Ladrillo10" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1272, -7)
+
+[node name="Ladrillo22" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1288, -7)
+
+[node name="Ladrillo7" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1304, -7)
+
+[node name="Ladrillo19" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1320, -7)
+
+[node name="Ladrillo13" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1336, -7)
+
+[node name="Ladrillo25" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1352, -7)
+
+[node name="Ladrillo5" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1368, -7)
+
+[node name="Ladrillo17" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1384, -7)
+
+[node name="Ladrillo11" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1448, -7)
+
+[node name="Ladrillo23" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1464, -7)
+
+[node name="Ladrillo8" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1480, -7)
+
+[node name="Ladrillo20" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1496, 57)
+
+[node name="Ladrillo14" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1592, 57)
+
+[node name="Ladrillo26" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1608, 57)
+
+[node name="Ladrillo6" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1880, 57)
+
+[node name="Ladrillo18" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1928, -7)
+
+[node name="Ladrillo12" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1944, -7)
+
+[node name="Ladrillo24" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(1960, -7)
+
+[node name="Ladrillo9" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2040, -7)
+
+[node name="Ladrillo21" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2088, -7)
+
+[node name="Ladrillo29" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2728, 57)
+
+[node name="Ladrillo15" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2056, 57)
+
+[node name="Ladrillo28" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2680, 57)
+
+[node name="Ladrillo27" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2072, 57)
+
+[node name="Ladrillo30" parent="Nivel/Bricks" instance=ExtResource("18")]
+position = Vector2(2696, 57)
+
+[node name="CheckPoints" type="Node" parent="Nivel"]
+
+[node name="CheckPoint" parent="Nivel/CheckPoints" instance=ExtResource("19")]
+audio_bus_name = &"Master"
+
+[node name="CheckPoint2" parent="Nivel/CheckPoints" instance=ExtResource("19")]
+position = Vector2(1850, 20)
+audio_bus_name = &"Master"
+
+[node name="Finish" type="Node" parent="Nivel"]
+
+[node name="Finish" parent="Nivel/Finish" instance=ExtResource("20")]
+audio_bus_name = &"Master"
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="txt_mario" type="Label" parent="GUI"]
+text = "MARIO"
+
+[node name="txt_points" type="Label" parent="GUI" groups=["txt_point"]]
+text = "000000"
+horizontal_alignment = 1
+
+[node name="txt_monero" type="Label" parent="GUI" groups=["txt_monedas"]]
+text = "x0"
+horizontal_alignment = 1
+
+[node name="Sprite" type="Sprite2D" parent="GUI/txt_monero"]
+position = Vector2(6, 13)
+scale = Vector2(3.8, 3.75)
+texture = ExtResource("22")
+hframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GUI/txt_monero"]
+libraries = {
+"": SubResource("AnimationLibrary_8b7ee")
+}
+autoplay = "normal"
+
+[node name="txt_time" type="Label" parent="GUI"]
+text = "TIME"
+
+[node name="txt_tiempo" type="Label" parent="GUI" groups=["txt_time"]]
+text = "400"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="GUI"]
+process_mode = 1
+autostart = true
+
+[node name="BGM" type="Node" parent="." groups=["bgm"]]
+
+[node name="1" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("23")
+autoplay = true
+
+[node name="2" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("24")
+
+[node name="SFX" type="Node" parent="." groups=["sfx"]]
+
+[node name="1" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("25")
+
+[node name="2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("26")
+
+[node name="3" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("27")
+
+[node name="4" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("28")
+
+[node name="5" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("29")
+
+[node name="6" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("30")
+
+[node name="7" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("31")
+
+[node name="8" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("32")
+
+[node name="9" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("33")
+
+[node name="10" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("34")
+
+[node name="11" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("35")
+
+[connection signal="timeout" from="GUI/Timer" to="." method="_on_Timer_timeout"]

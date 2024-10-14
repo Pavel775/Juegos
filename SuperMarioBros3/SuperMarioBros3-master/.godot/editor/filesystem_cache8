@@ -1,0 +1,99 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1728933035
+default_env.tres::Environment::-1::1728932744::0::1::::<><>::
+gamehandler.gd::GDScript::-1::1728932744::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::1409687950800413771::1728932744::1728933037::1::::<><>::
+listita.png::CompressedTexture2D::2514212700724758780::1728932744::1728933037::1::::<><>::
+::res://BGM/::1728932747
+01-main-theme-overworld.mp3::AudioStreamMP3::9054234211718739140::1728932746::1728933037::1::::<><>::
+01-main-theme-overworld.ogg::AudioStreamOggVorbis::697687249786152572::1728932746::1728933037::1::::<><>::
+18-hurry-overworld-.ogg::AudioStreamOggVorbis::8337030717921978386::1728932746::1728933037::1::::<><>::
+Die.wav::AudioStreamWAV::8928146025707317139::1728932747::1728933037::1::::<><>::
+Game Over.wav::AudioStreamWAV::4831176085896067827::1728932747::1728933037::1::::<><>::
+Pause.wav::AudioStreamWAV::1612102845507661401::1728932747::1728933037::1::::<><>::
+::res://fONTS/::1728932752
+Super Plumber Brothers.ttf::FontFile::8408162336410631550::1728932752::1728933037::1::::<><>::
+SuperMario256.ttf::FontFile::8615034179274667352::1728932752::1728933037::1::::<><>::
+::res://Scenes/::1728932750
+BaseTubo.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Sprites/tubo.png
+CaradeNabo.gd::GDScript::-1::1728932749::0::1::::<>KinematicBody2D<>::
+CaradeNabo.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/CaradeNabo.gd<>res://Sprites/caradenabo.png
+CheckPoint.gd::GDScript::-1::1728932749::0::1::::<>Area2D<>::
+CheckPoint.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/CheckPoint.gd
+CuboM.gd::GDScript::-1::1728932749::0::1::::<>StaticBody2D<>::
+CuboM.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/CuboM.gd<>res://Scenes/Moneda_Bonus.tscn<>res://Scenes/Hongo.tscn<>res://Scenes/Flor.tscn<>res://Sprites/cubos.png
+Finish.gd::GDScript::-1::1728932749::0::1::::<>Area2D<>::
+Finish.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/Finish.gd<>res://Tileset/lvl1.png<>res://Sprites/flag.png
+Flor.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Sprites/flor.png
+Fuego.gd::GDScript::-1::1728932749::0::1::::<>RigidBody2D<>::
+Fuego.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/Fuego.gd<>res://Sprites/fuego.png
+Hongo.gd::GDScript::-1::1728932749::0::1::::<>KinematicBody2D<>::
+Hongo.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Scenes/Hongo.gd<>res://Sprites/powerups.png
+Ladrillo.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Sprites/brick.png
+Ladrillo_Explode.tscn::PackedScene::-1::1728932749::0::1::::<><>::res://Sprites/brick.png
+Lista_Objetos.gd::GDScript::-1::1728932749::0::1::::<>Node<>::
+main.gd::GDScript::-1::1728932750::0::1::::<>Node<>::
+main.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Scenes/main.gd<>res://Scenes/Mario_bdy.tscn<>res://Scenes/Lista_Objetos.gd<>res://Scenes/Ladrillo_Explode.tscn<>res://Scenes/Fuego.tscn<>res://Scenes/Mario_W.tscn<>res://Tileset/NES - Super Mario Bros - World 1-1.png<>res://Tileset/lvl1.tres<>res://Scenes/Tortuga.tscn<>res://Scenes/CaradeNabo.tscn<>res://Scenes/Tubo.tscn<>res://Scenes/BaseTubo.tscn<>res://Scenes/CuboM.tscn<>res://Scenes/CuboM.gd<>res://Scenes/Moneda_Bonus.tscn<>res://Scenes/Hongo.tscn<>res://Sprites/cubos.png<>res://Scenes/Ladrillo.tscn<>res://Scenes/CheckPoint.tscn<>res://Scenes/Finish.tscn<>res://fONTS/SuperMario256.ttf<>res://Sprites/gui_moneda.png<>res://BGM/01-main-theme-overworld.ogg<>res://BGM/18-hurry-overworld-.ogg<>res://SFX/smb_jump-small.wav<>res://SFX/1up.wav<>res://SFX/smb_coin.wav<>res://SFX/smb_breakblock.wav<>res://SFX/smb_bump.wav<>res://SFX/Fire Ball.wav<>res://SFX/smb_flagpole.wav<>res://SFX/smb_powerup_appears.wav<>res://SFX/smb_kick.wav<>res://SFX/smb_powerup.wav<>res://SFX/smb_stomp.wav
+Mario_bdy.gd::GDScript::-1::1728932750::0::1::::<>KinematicBody2D<>::
+Mario_bdy.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Scenes/Mario_bdy.gd<>res://Sprites/mario_c.png<>res://Sprites/mario_g.png<>res://Sprites/mario_f.png<>res://Scenes/TransMarioC.tscn<>res://Scenes/TransMarioG.tscn
+Mario_W.gd::GDScript::-1::1728932750::0::1::::<>KinematicBody2D<>::
+Mario_W.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Scenes/Mario_W.gd<>res://Sprites/mario_c.png
+Moneda_Bonus.gd::GDScript::-1::1728932750::0::1::::<>Sprite<>::
+Moneda_Bonus.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Sprites/monedas.png<>res://Scenes/Moneda_Bonus.gd
+Tilelvl1.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Tileset/lvl1.png
+Tortuga.gd::GDScript::-1::1728932750::0::1::::<>KinematicBody2D<>::
+Tortuga.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Scenes/Tortuga.gd<>res://Sprites/turtle.png
+TransMario.gd::GDScript::-1::1728932750::0::1::::<>CollisionShape2D<>::
+TransMarioC.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Scenes/TransMario.gd
+TransMarioG.tscn::PackedScene::-1::1728932750::0::1::::<><>::
+Tubo.tscn::PackedScene::-1::1728932750::0::1::::<><>::res://Sprites/tubo.png
+::res://SFX/::1728932749
+1up.wav::AudioStreamWAV::673544176693942306::1728932747::1728933037::1::::<><>::
+Big Jump.wav::AudioStreamWAV::6287186808688886644::1728932747::1728933037::1::::<><>::
+Break.wav::AudioStreamWAV::7228063655109498845::1728932747::1728933037::1::::<><>::
+Bump.wav::AudioStreamWAV::777299725841324482::1728932747::1728933037::1::::<><>::
+Coin.wav::AudioStreamWAV::3488695890865561835::1728932747::1728933037::1::::<><>::
+Fire Ball.wav::AudioStreamWAV::1536517456826019563::1728932747::1728933037::1::::<><>::
+Flagpole.wav::AudioStreamWAV::2872497823875206151::1728932747::1728933037::1::::<><>::
+Item.wav::AudioStreamWAV::8590006576967560312::1728932747::1728933037::1::::<><>::
+Jump.wav::AudioStreamWAV::2751223310551346379::1728932747::1728933037::1::::<><>::
+Kick.wav::AudioStreamWAV::4811598276304162752::1728932747::1728933037::1::::<><>::
+Powerup.wav::AudioStreamWAV::4357327965391990704::1728932748::1728933037::1::::<><>::
+smb_breakblock.wav::AudioStreamWAV::2356061340876083348::1728932748::1728933037::1::::<><>::
+smb_bump.wav::AudioStreamWAV::1869471020219127332::1728932748::1728933037::1::::<><>::
+smb_coin.wav::AudioStreamWAV::1732290154961078023::1728932748::1728933037::1::::<><>::
+smb_flagpole.wav::AudioStreamWAV::2432883825772888944::1728932748::1728933037::1::::<><>::
+smb_jump-small.wav::AudioStreamWAV::8432936781774980095::1728932748::1728933037::1::::<><>::
+smb_kick.wav::AudioStreamWAV::6836398050458922318::1728932748::1728933037::1::::<><>::
+smb_powerup.wav::AudioStreamWAV::7340553334245153262::1728932749::1728933037::1::::<><>::
+smb_powerup_appears.wav::AudioStreamWAV::3488709624529976443::1728932749::1728933037::1::::<><>::
+smb_stomp.wav::AudioStreamWAV::384352284270175655::1728932749::1728933037::1::::<><>::
+Squish.wav::AudioStreamWAV::550247271352641456::1728932748::1728933037::1::::<><>::
+Vine.wav::AudioStreamWAV::8264546884806559155::1728932748::1728933037::1::::<><>::
+Warp.wav::AudioStreamWAV::3297113879747856250::1728932748::1728933037::1::::<><>::
+::res://Sprites/::1728932751
+brick.png::CompressedTexture2D::5567233753535299407::1728932751::1728933037::1::::<><>::
+caradenabo.png::CompressedTexture2D::1341989168091366303::1728932751::1728933037::1::::<><>::
+cubos.png::CompressedTexture2D::3451311680335324031::1728932751::1728933037::1::::<><>::
+flag.png::CompressedTexture2D::1923377058732502062::1728932751::1728933037::1::::<><>::
+flor.png::CompressedTexture2D::8627432620656479603::1728932751::1728933037::1::::<><>::
+fuego.png::CompressedTexture2D::4325300267895509572::1728932751::1728933037::1::::<><>::
+gui_moneda.png::CompressedTexture2D::2571670552133439048::1728932751::1728933037::1::::<><>::
+mario_c.png::CompressedTexture2D::2354551073511193103::1728932751::1728933037::1::::<><>::
+mario_f.png::CompressedTexture2D::5314872045120138549::1728932751::1728933037::1::::<><>::
+mario_g.png::CompressedTexture2D::8282830446173754215::1728932751::1728933037::1::::<><>::
+monedas.png::CompressedTexture2D::2541693377546084498::1728932751::1728933037::1::::<><>::
+NES - Super Mario Bros - Enemies.png::CompressedTexture2D::7745982208611881853::1728932750::1728933037::1::::<><>::
+NES - Super Mario Bros - Item and Brick Blocks.png::CompressedTexture2D::4803458466321486515::1728932750::1728933037::1::::<><>::
+NES - Super Mario Bros - Items & Objects.png::CompressedTexture2D::7870391157442732651::1728932750::1728933037::1::::<><>::
+NES - Super Mario Bros - Mario & Luigi.png::CompressedTexture2D::6145047598347156541::1728932751::1728933037::1::::<><>::
+powerups.png::CompressedTexture2D::4523043921893463484::1728932751::1728933037::1::::<><>::
+tubo.png::CompressedTexture2D::700791308120113342::1728932751::1728933037::1::::<><>::
+turtle.png::CompressedTexture2D::928630604056926373::1728932751::1728933037::1::::<><>::
+::res://Tileset/::1728932752
+lvl1-1.tres::TileSet::-1::1728932752::0::1::::<><>::res://Tileset/lvl1.png
+lvl1.png::CompressedTexture2D::6024655639837611361::1728932752::1728933037::1::::<><>::
+lvl1.tres::TileSet::-1::1728932752::0::1::::<><>::res://Tileset/lvl1.png
+NES - Super Mario Bros - Tileset.png::CompressedTexture2D::8864771268962605657::1728932752::1728933037::1::::<><>::
+NES - Super Mario Bros - Title Screen.png::CompressedTexture2D::480999438922845735::1728932752::1728933037::1::::<><>::
+NES - Super Mario Bros - World 1-1.png::CompressedTexture2D::3506149334471231456::1728932752::1728933037::1::::<><>::
